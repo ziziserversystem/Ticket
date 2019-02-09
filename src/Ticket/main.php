@@ -345,7 +345,7 @@ class main extends PluginBase implements Listener{
 							 $sender->sendMesaage("畑チケット3 購入済");
 						 }
 						 if(!$this->sign1->exists($args[1]) && !$this->sign2->exists($args[1]) && !$this->sign3->exists($args[1]) && !$this->field1->exists($args[1]) && !$this->field2->exists($args[1]) && !$this->field3->exists($args[1])){
-							 $sender->sendMessage("");
+							 $sender->sendMessage("{$args[1]}はチケットを所有していません");
 						 }
 					 }
 				         return true;
