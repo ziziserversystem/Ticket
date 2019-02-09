@@ -150,7 +150,7 @@ class main extends PluginBase implements Listener{
 			            }
 			        }
 			    }
-      return true;
+                        return true;
 			    
 			case "delticket":
 			$coinsystem = MixCoinSystem::getInstance();
@@ -246,7 +246,7 @@ class main extends PluginBase implements Listener{
 			            }
 			        }
 			    }
-      retuen true;
+                        retuen true;
 
 			case "tickets":
 			if($sender instanceof Player){
@@ -321,7 +321,34 @@ class main extends PluginBase implements Listener{
 			                     $sender->sendMessage("{$key}");
 			                 }
 			                 break;
-			                 
+						    
+					 case "check":
+				         if(!isset($args[1])){
+						 $sender->sendMessage("use: /tickets check <名前>");
+					 }else{
+						 if($this->sign1->exists($args[1])){
+							 $sender->sendMessage("看板チケット1 購入済");
+						 }
+						 if($this->sign2->exists($args[1])){
+							 $sender->sendMessage("看板チケット2 購入済");
+						 }
+						 if($this->sign3->exists($args[1])){
+							 $sender->sendMessage("看板チケット3 購入済");
+						 }
+						 if($this->field1->exists($args[1])){
+							 $sender->sendMessage("畑チケット1 購入済");
+						 }
+						 if($this->field2->exists($args[1])){
+							 $sender->sendMessage("畑チケット2 購入済");
+						 }
+						 if($this->field3->exists($args[1])){
+							 $sender->sendMesaage("畑チケット3 購入済");
+						 }
+						 if(!$this->sign1->exists($args[1]) && !$this->sign2->exists($args[1]) && !$this->sign3->exists($args[1]) && !$this->field1->exists($args[1]) && !$this->field2->exists($args[1]) && !$this->field3->exists($args[1])){
+							 $sender->sendMessage("");
+						 }
+					 }
+				         return true;
 			            }
 			    }
 			}
