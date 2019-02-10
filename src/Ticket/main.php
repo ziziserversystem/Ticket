@@ -50,7 +50,7 @@ class main extends PluginBase implements Listener{
 			                if($this->sign1->exists($name)){
 			                    $sender->sendMessage("§e>>看板チケット1は既に購入済みです");
 			                }else{
-			                    if($coinsystem->GetCoin($sender) >= 500){
+			                    if($coinsystem->GetCoin($name) >= 500){
 			                        $this->sign1->set($name,count($this->sign1->getAll())+1);
 			                        $this->sign1->save();
 			                        $this->sign1->reload();
@@ -67,7 +67,7 @@ class main extends PluginBase implements Listener{
 			                if($this->sign2->exists($name)){
 			                    $sender->sendMessage("§e>>看板チケット2は既に購入済みです");
 			                }else{
-			                    if($coinsystem->GetCoin($sender) >= 1000){
+			                    if($coinsystem->GetCoin($name) >= 1000){
 			                        $this->sign2->set($name,count($this->sign2->getAll())+1);
 			                        $this->sign2->save();
 			                        $this->sign2->reload();
@@ -84,7 +84,7 @@ class main extends PluginBase implements Listener{
 			                if($this->sign3->exists($name)){
 			                    $sender->sendMessage("§e>>看板チケット3は既に購入済みです");
 			                }else{
-			                    if($coinsystem->GetCoin($sender) >= 1500){
+			                    if($coinsystem->GetCoin($name) >= 1500){
 			                        $this->sign3->set($name,count($this->sign3->getAll())+1);
 			                        $this->sign3->save();
 			                        $this->sign3->reload();
@@ -101,7 +101,7 @@ class main extends PluginBase implements Listener{
 			                if($this->field1->exists($name)){
 			                    $sender->sendMessage("§e>>畑チケット1は既に購入済みです");
 			                }else{
-			                    if($coinsystem->GetCoin($sender) >= 500){
+			                    if($coinsystem->GetCoin($name) >= 500){
 			                        $this->field1->set($name,count($this->field1->getAll())+1);
 			                        $this->field1->save();
 			                        $this->field1->reload();
@@ -118,7 +118,7 @@ class main extends PluginBase implements Listener{
 			                if($this->field2->exists($name)){
 			                    $sender->sendMessage("§e>>畑チケット2は既に購入済みです");
 			                }else{
-			                    if($coinsystem->GetCoin($sender) >= 1000){
+			                    if($coinsystem->GetCoin($name) >= 1000){
 			                        $this->field2->set($name,count($this->field2->getAll())+1);
 			                        $this->field2->save();
 			                        $this->field2->reload();
@@ -135,7 +135,7 @@ class main extends PluginBase implements Listener{
 			                if($this->field2->exists($name)){
 			                    $sender->sendMessage("§e>>畑チケット3は既に購入済みです");
 			                }else{
-			                    if($coinsystem->GetCoin($sender) >= 1500){
+			                    if($coinsystem->GetCoin($name) >= 1500){
 			                        $this->field3->set($name,count($this->field3->getAll())+1);
 			                        $this->field3->save();
 			                        $this->field3->reload();
