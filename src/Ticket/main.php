@@ -246,7 +246,7 @@ class main extends PluginBase implements Listener{
 			            }
 			        }
 			    }
-                        retuen true;
+                        return true;
 
 			case "tickets":
 			if($sender instanceof Player){
