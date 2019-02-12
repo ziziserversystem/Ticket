@@ -327,25 +327,25 @@ class main extends PluginBase implements Listener{
 						 $sender->sendMessage("use: /tickets check <名前>");
 					 }else{
 						 if($this->sign1->exists($args[1])){
-							 $sender->sendMessage("看板チケット1 購入済");
+							 $sender->sendMessage("§e>>看板チケット1 購入済");
 						 }
 						 if($this->sign2->exists($args[1])){
-							 $sender->sendMessage("看板チケット2 購入済");
+							 $sender->sendMessage("§e>>看板チケット2 購入済");
 						 }
 						 if($this->sign3->exists($args[1])){
-							 $sender->sendMessage("看板チケット3 購入済");
+							 $sender->sendMessage("§e>>看板チケット3 購入済");
 						 }
 						 if($this->field1->exists($args[1])){
-							 $sender->sendMessage("畑チケット1 購入済");
+							 $sender->sendMessage("§e>>畑チケット1 購入済");
 						 }
 						 if($this->field2->exists($args[1])){
-							 $sender->sendMessage("畑チケット2 購入済");
+							 $sender->sendMessage("§e>>畑チケット2 購入済");
 						 }
 						 if($this->field3->exists($args[1])){
-							 $sender->sendMesaage("畑チケット3 購入済");
+							 $sender->sendMesaage("§e>>畑チケット3 購入済");
 						 }
 						 if(!$this->sign1->exists($args[1]) && !$this->sign2->exists($args[1]) && !$this->sign3->exists($args[1]) && !$this->field1->exists($args[1]) && !$this->field2->exists($args[1]) && !$this->field3->exists($args[1])){
-							 $sender->sendMessage("{$args[1]}はチケットを所有していません");
+							 $sender->sendMessage("§e>>{$args[1]}はチケットを所有していません");
 						 }
 					 }
 				         return true;
