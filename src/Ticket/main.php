@@ -18,7 +18,6 @@ class main extends PluginBase implements Listener{
 
 	public function onEnable(){
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
-		$this->getServer()->getLogger()->info("Ticketを読み込みました");
 		if(!file_exists($this->getDataFolder())){
 			mkdir($this->getDataFolder(), 0744, true);
 		}
