@@ -65,7 +65,9 @@ class main extends PluginBase implements Listener{
 			                $name = $sender->getName();
 			                if($this->sign2->exists($name)){
 			                    $sender->sendMessage("§a【運営】 §c看板チケット2は既に購入済みです");
-			                }else{
+			                }elseif(!$this->sign1->exists($name)){
+					    $sender->sendMessage("§a【運営】 §c先に看板チケット1を購入してください");
+					}else{
 			                    if($coinsystem->GetCoin($name) >= 1000){
 			                        $this->sign2->set($name,count($this->sign2->getAll())+1);
 			                        $this->sign2->save();
@@ -82,7 +84,9 @@ class main extends PluginBase implements Listener{
 			                $name = $sender->getName();
 			                if($this->sign3->exists($name)){
 			                    $sender->sendMessage("§a【運営】 §c看板チケット3は既に購入済みです");
-			                }else{
+			                }elseif(!$this->sign2->exists($name)){
+					    $sender->sendMessage("§a【運営】 §c先に看板チケット2を購入してください");
+					}else{
 			                    if($coinsystem->GetCoin($name) >= 1500){
 			                        $this->sign3->set($name,count($this->sign3->getAll())+1);
 			                        $this->sign3->save();
@@ -116,7 +120,9 @@ class main extends PluginBase implements Listener{
 			                $name = $sender->getName();
 			                if($this->field2->exists($name)){
 			                    $sender->sendMessage("§a【運営】 §c畑チケット2は既に購入済みです");
-			                }else{
+			                }elseif(!$this->field1->exists($name)){
+					    $sender->sendMessage("§a【運営】 §c先に畑チケット1を購入してください");
+					}else{
 			                    if($coinsystem->GetCoin($name) >= 1000){
 			                        $this->field2->set($name,count($this->field2->getAll())+1);
 			                        $this->field2->save();
@@ -133,7 +139,9 @@ class main extends PluginBase implements Listener{
 			                $name = $sender->getName();
 			                if($this->field2->exists($name)){
 			                    $sender->sendMessage("§a【運営】 §c畑チケット3は既に購入済みです");
-			                }else{
+			                }elseif(!$this->field2->exists($name)){
+					    $sender->sendMessage("§a【運営】 §c先に畑チケット2を購入してください");
+					}else{
 			                    if($coinsystem->GetCoin($name) >= 1500){
 			                        $this->field3->set($name,count($this->field3->getAll())+1);
 			                        $this->field3->save();
