@@ -36,7 +36,7 @@ class main extends PluginBase implements Listener{
 			$coinsystem = MixCoinSystem::getInstance();
 			if($sender instanceof Player){
 			    if(!isset($args[0])){
-			        $sender->sendMessage("§9§l〜チケット一覧〜");
+			        $sender->sendMessage("§e§l〜チケット一覧〜");
 			        $sender->sendMessage("看板チケット1  コイン500枚  (sign1)");
 			        $sender->sendMessage("看板チケット2  コイン1000枚  (sign2)");
 			        $sender->sendMessage("看板チケット3  コイン1500枚  (sign3)");
@@ -48,16 +48,16 @@ class main extends PluginBase implements Listener{
 			                case "sign1":
 			                $name = $sender->getName();
 			                if($this->sign1->exists($name)){
-			                    $sender->sendMessage("§e>>看板チケット1は既に購入済みです");
+			                    $sender->sendMessage("§a【運営】 §c看板チケット1は既に購入済みです");
 			                }else{
 			                    if($coinsystem->GetCoin($name) >= 500){
 			                        $this->sign1->set($name,count($this->sign1->getAll())+1);
 			                        $this->sign1->save();
 			                        $this->sign1->reload();
 			                        $coinsystem->MinusCoin($name,500);
-			                        $sender->sendMessage("§e>>看板チケット1を500コインで購入しました");
+			                        $sender->sendMessage("§a【運営】 §f看板チケット1を500コインで購入しました");
 			                    }else{
-			                        $sender->sendMessage("§e>>所有コインが不足しています");
+			                        $sender->sendMessage("§a【運営】 §c所有コインが不足しています");
 			                    }
 			                }
 			                return true;
@@ -65,16 +65,16 @@ class main extends PluginBase implements Listener{
 			                case "sign2":
 			                $name = $sender->getName();
 			                if($this->sign2->exists($name)){
-			                    $sender->sendMessage("§e>>看板チケット2は既に購入済みです");
+			                    $sender->sendMessage("§a【運営】 §c看板チケット2は既に購入済みです");
 			                }else{
 			                    if($coinsystem->GetCoin($name) >= 1000){
 			                        $this->sign2->set($name,count($this->sign2->getAll())+1);
 			                        $this->sign2->save();
 			                        $this->sign2->reload();
 			                        $coinsystem->MinusCoin($name,1000);
-			                        $sender->sendMessage("§e>>看板チケット2を1000コインで購入しました");
+			                        $sender->sendMessage("§a【運営】 §f看板チケット2を1000コインで購入しました");
 			                    }else{
-			                        $sender->sendMessage("§e>>所有コインが不足しています");
+			                        $sender->sendMessage("§a【運営】 §c所有コインが不足しています");
 			                    }
 			                }
 			                return true;
@@ -82,16 +82,16 @@ class main extends PluginBase implements Listener{
 			                case "sign3":
 			                $name = $sender->getName();
 			                if($this->sign3->exists($name)){
-			                    $sender->sendMessage("§e>>看板チケット3は既に購入済みです");
+			                    $sender->sendMessage("§a【運営】 §c看板チケット3は既に購入済みです");
 			                }else{
 			                    if($coinsystem->GetCoin($name) >= 1500){
 			                        $this->sign3->set($name,count($this->sign3->getAll())+1);
 			                        $this->sign3->save();
 			                        $this->sign3->reload();
 			                        $coinsystem->MinusCoin($name,1500);
-			                        $sender->sendMessage("§e>>看板チケット3を1500コインで購入しました");
+			                        $sender->sendMessage("§a【運営】 §f看板チケット3を1500コインで購入しました");
 			                    }else{
-			                        $sender->sendMessage("§e>>所有コインが不足しています");
+			                        $sender->sendMessage("§a【運営】 §c所有コインが不足しています");
 			                    }
 			                }
 			                return true;
@@ -99,16 +99,16 @@ class main extends PluginBase implements Listener{
 			                case "field1":
 			                $name = $sender->getName();
 			                if($this->field1->exists($name)){
-			                    $sender->sendMessage("§e>>畑チケット1は既に購入済みです");
+			                    $sender->sendMessage("§a【運営】 §c畑チケット1は既に購入済みです");
 			                }else{
 			                    if($coinsystem->GetCoin($name) >= 500){
 			                        $this->field1->set($name,count($this->field1->getAll())+1);
 			                        $this->field1->save();
 			                        $this->field1->reload();
 			                        $coinsystem->MinusCoin($name,500);
-			                        $sender->sendMessage("§e>>畑チケット1を500コインで購入しました");
+			                        $sender->sendMessage("§a【運営】 §f畑チケット1を500コインで購入しました");
 			                    }else{
-			                        $sender->$sendMessage("§e>>所有コインが不足しています");
+			                        $sender->$sendMessage("§a【運営】 §c所有コインが不足しています");
 			                    }
 			                }
 			                return true;
@@ -116,16 +116,16 @@ class main extends PluginBase implements Listener{
 			                case "field2":
 			                $name = $sender->getName();
 			                if($this->field2->exists($name)){
-			                    $sender->sendMessage("§e>>畑チケット2は既に購入済みです");
+			                    $sender->sendMessage("§a【運営】 §c畑チケット2は既に購入済みです");
 			                }else{
 			                    if($coinsystem->GetCoin($name) >= 1000){
 			                        $this->field2->set($name,count($this->field2->getAll())+1);
 			                        $this->field2->save();
 			                        $this->field2->reload();
 			                        $coinsystem->MinusCoin($name,1000);
-			                        $sender->sendMessage("§e>>畑チケット2を1000コインで購入しました");
+			                        $sender->sendMessage("§a【運営】 §f畑チケット2を1000コインで購入しました");
 			                    }else{
-			                        $sender->sendMessage("§e>>所有コインが不足しています");
+			                        $sender->sendMessage("§a【運営】 §c所有コインが不足しています");
 			                    }
 			                }
 			                return true;
@@ -133,16 +133,16 @@ class main extends PluginBase implements Listener{
 			                case "field3":
 			                $name = $sender->getName();
 			                if($this->field2->exists($name)){
-			                    $sender->sendMessage("§e>>畑チケット3は既に購入済みです");
+			                    $sender->sendMessage("§a【運営】 §c畑チケット3は既に購入済みです");
 			                }else{
 			                    if($coinsystem->GetCoin($name) >= 1500){
 			                        $this->field3->set($name,count($this->field3->getAll())+1);
 			                        $this->field3->save();
 			                        $this->field3->reload();
 			                        $coinsystem->MinusCoin($name,1500);
-			                        $sender->sendMessage("§e>>畑チケット3を1500コインで購入しました");
+			                        $sender->sendMessage("§a【運営】 §f畑チケット3を1500コインで購入しました");
 			                    }else{
-			                        $sender->sendMessage("§e>>所有コインが不足しています");
+			                        $sender->sendMessage("§a【運営】 §c所有コインが不足しています");
 			                    }
 			                }
 			                return true;
@@ -156,7 +156,7 @@ class main extends PluginBase implements Listener{
 			$coinsystem = MixCoinSystem::getInstance();
 			if($sender instanceof Player){
 			    if(!isset($args[0])){
-			        $sender->sendMessage("§9§l〜チケット一覧〜 (売却価格)");
+			        $sender->sendMessage("§e§l〜チケット一覧〜 (売却価格)");
 			        $sender->sendMessage("看板チケット1  コイン250枚  (sign1)");
 			        $sender->sendMessage("看板チケット2  コイン500枚  (sign2)");
 			        $sender->sendMessage("看板チケット3  コイン750枚  (sign3)");
@@ -172,9 +172,9 @@ class main extends PluginBase implements Listener{
 			                    $this->sign1->save();
 			                    $this->sign1->reload();
 			                    $coinsystem->PlusCoin($name,250);
-			                    $sender->sendMessage("§e>>看板チケット1を売却しました");
+			                    $sender->sendMessage("§a【運営】 §f看板チケット1を売却しました");
 			                }else{
-			                    $sender->sendMessage("§e>>看板チケット1は未購入です");
+			                    $sender->sendMessage("§a【運営】 §c看板チケット1は未購入です");
 			                }
 			                return true;
 			                
@@ -185,9 +185,9 @@ class main extends PluginBase implements Listener{
 			                    $this->sign2->save();
 			                    $this->sign2->reload();
 			                    $coinsystem->PlusCoin($name,500);
-			                    $sender->sendMessage("§e>>看板チケット2を売却しました");
+			                    $sender->sendMessage("§a【運営】 §f看板チケット2を売却しました");
 			                }else{
-			                    $sender->sendMessage("§e>>看板チケット2は未購入です");
+			                    $sender->sendMessage("§a【運営】 §c看板チケット2は未購入です");
 			                }
 			                return true;
 			                
@@ -198,9 +198,9 @@ class main extends PluginBase implements Listener{
 			                    $this->sign3->save();
 			                    $this->sign3->reload();
 			                    $coinsystem->PlusCoin($name,750);
-			                    $sender->sendMessage("§e>>看板チケット3を売却しました");
+			                    $sender->sendMessage("§a【運営】 §f看板チケット3を売却しました");
 			                }else{
-			                    $sender->sendMessage("§e>>看板チケット3は未購入です");
+			                    $sender->sendMessage("§a【運営】 §c看板チケット3は未購入です");
 			                }
 			                return true;
 			                
@@ -211,9 +211,9 @@ class main extends PluginBase implements Listener{
 			                    $this->field1->save();
 			                    $this->field1->reload();
 			                    $coinsystem->PlusCoin($name,250);
-			                    $sender->sendMessage("§e>>畑チケット1を売却しました");
+			                    $sender->sendMessage("§a【運営】 §f畑チケット1を売却しました");
 			                }else{
-			                    $sender->sendMessage("§e>>畑チケット1は未購入です");
+			                    $sender->sendMessage("§a【運営】 §c畑チケット1は未購入です");
 			                }
 			                return true;
 			                
@@ -224,9 +224,9 @@ class main extends PluginBase implements Listener{
 			                    $this->field2->save();
 			                    $this->field2->reload();
 			                    $coinsystem->PlusCoin($name,500);
-			                    $sender->sendMessage("§e>>畑チケット2を売却しました");
+			                    $sender->sendMessage("§a【運営】 §f畑チケット2を売却しました");
 			                }else{
-			                    $sender->sendMessage("§e>>畑チケット2は未購入です");
+			                    $sender->sendMessage("§a【運営】 §c畑チケット2は未購入です");
 			                }
 			                return true;
 			                
@@ -237,9 +237,9 @@ class main extends PluginBase implements Listener{
 			                    $this->field3->save();
 			                    $this->field3->reload();
 			                    $coinsystem->PlusCoin($name,750);
-			                    $sender->sendMessage("§e>>畑チケット3を売却しました");
+			                    $sender->sendMessage("§a【運営】 §f畑チケット3を売却しました");
 			                }else{
-			                    $sender->sendMessage("§e>>畑チケット3は未購入です");
+			                    $sender->sendMessage("§a【運営】 §c畑チケット3は未購入です");
 			                }
 			                return true;
 			                
@@ -254,69 +254,69 @@ class main extends PluginBase implements Listener{
 			        }else{
 			            switch($args[0]){
 			                 case "sign1":
-			                 $sender->sendMessage("§9§l看板チケット1 購入者");
+			                 $sender->sendMessage("§e§l看板チケット1 購入者");
 			                 foreach($this->sign1->getAll() as $key=>$value){//sign1にある全ての$keyを取得
 			                     $sender->sendMessage("{$key}");//購入者の名前を表示 ($keyから)
 			                 }
 			                 break;
 			                 
 			                 case "sign2":
-			                 $sender->sendMessage("§9§l看板チケット2 購入者");
+			                 $sender->sendMessage("§e§l看板チケット2 購入者");
 			                 foreach($this->sign2->getAll() as $key=>$value){
 			                     $sender->sendMessage("{$key}");
 			                 }
 			                 break;
 			                 
 			                 case "sign3":
-			                 $sender->sendMessage("§9§l看板チケット3 購入者");
+			                 $sender->sendMessage("§e§l看板チケット3 購入者");
 			                 foreach($this->sign3->getAll() as $key=>$value){
 			                     $sender->sendMessage("{$key}");
 			                 }
 			                 break;
 			                 
 			                 case "field1":
-			                 $sender->sendMessage("§9§l畑チケット1 購入者");
+			                 $sender->sendMessage("§e§l畑チケット1 購入者");
 			                 foreach($this->field1->getAll() as $key=>$value){
 			                     $sender->sendMessage("{$key}");
 			                 }
 			                 break;
 			                 
 			                 case "field2":
-			                 $sender->sendMessage("§9§l畑チケット2 購入者");
+			                 $sender->sendMessage("§e§l畑チケット2 購入者");
 			                 foreach($this->field2->getAll() as $key=>$value){
 			                     $sender->sendMessage("{$key}");
 			                 }
 			                 break;
 			                 
 			                 case "field3":
-			                 $sender->sendMessage("§9§l畑チケット3 購入者");
+			                 $sender->sendMessage("§e§l畑チケット3 購入者");
 			                 foreach($this->field3->getAll() as $key=>$value){
 			                     $sender->sendMessage("{$key}");
 			                 }
 			                 break;
 			                 
 			                 case "all":
-			                 $sender->sendMessage("§9§l看板チケット1 購入者");
+			                 $sender->sendMessage("§e§l看板チケット1 購入者");
 			                 foreach($this->sign1->getAll() as $key=>$value){
 			                     $sender->sendMessage("{$key}");
 			                 }
-			                 $sender->sendMessage("§9§l看板チケット2 購入者");
+			                 $sender->sendMessage("§e§l看板チケット2 購入者");
 			                 foreach($this->sign2->getAll() as $key=>$value){
 			                     $sender->sendMessage("{$key}");
 			                 }
-			                 $sender->sendMessage("§9§l看板チケット3 購入者");
+			                 $sender->sendMessage("§e§l看板チケット3 購入者");
 			                 foreach($this->sign3->getAll() as $key=>$value){
 			                     $sender->sendMessage("{$key}");
 			                 }
-			                 $sender->sendMessage("§9§l畑チケット1 購入者");
+			                 $sender->sendMessage("§e§l畑チケット1 購入者");
 			                 foreach($this->field1->getAll() as $key=>$value){
 			                     $sender->sendMessage("{$key}");
 			                 }
-			                 $sender->sendMessage("§9§l畑チケット2 購入者");
+			                 $sender->sendMessage("§e§l畑チケット2 購入者");
 			                 foreach($this->field2->getAll() as $key=>$value){
 			                     $sender->sendMessage("{$key}");
 			                 }
-			                 $sender->sendMessage("§9§l畑チケット3 購入者");
+			                 $sender->sendMessage("§e§l畑チケット3 購入者");
 			                 foreach($this->field3->getAll() as $key=>$value){
 			                     $sender->sendMessage("{$key}");
 			                 }
